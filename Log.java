@@ -2,6 +2,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
+
 public class Log {
     private static Log instance;
     private StringBuffer logBuffer;
