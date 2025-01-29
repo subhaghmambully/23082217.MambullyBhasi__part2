@@ -1,3 +1,5 @@
+package model;
+
 public class Worker {
     private String workerName;
 
@@ -6,14 +8,13 @@ public class Worker {
     }
 
     public double calculateFee(Parcel parcel) {
-        // test calc
+        // Example fee calculation
         return parcel.getWeight() * 0.5 + parcel.getDistance() * 0.2;
     }
 
-    public void processCustomer(Customer customer, Parcel parcel) {
-        double fee = calculateFee(parcel);
+    public void processCustomer(Customer customer, Parcel parcel, double fee) {
         Log.getInstance().logEvent("Worker " + workerName + " processed customer " + customer.getName() +
-                " for parcel " + parcel.getParcelId() + ". Fee: $" + fee);
+                " for parcel " + parcel.getParcelId() + ". Fee: $" + String.format("%.2f", fee));
         
     }
 }
