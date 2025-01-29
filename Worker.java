@@ -6,7 +6,7 @@ public class Worker {
     }
 
     public double calculateFee(Parcel parcel) {
-        // Simple fee calculation example
+        // test calc
         return parcel.getWeight() * 0.5 + parcel.getDistance() * 0.2;
     }
 
